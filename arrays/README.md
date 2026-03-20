@@ -45,3 +45,5 @@ This folder contains problems related to arrays.
   - Search element
   - First occurrence
   - Last occurrence
+  - Count occurrences
+  - Square root using binary search
