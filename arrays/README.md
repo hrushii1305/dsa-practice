@@ -36,3 +36,12 @@ This folder contains problems related to arrays.
 ## 📂 File
 
 - day1_arrays.py
+
+## 📅 Day 2 — Binary Search
+
+- Implemented binary search
+- Learned O(log n)
+- Solved:
+  - Search element
+  - First occurrence
+  - Last occurrence
