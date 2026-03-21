@@ -56,3 +56,4 @@ This folder contains problems related to arrays.
 2. Longest Substring Without Repeating Characters
 3. Minimum Size Subarray Sum
 4. Longest Substring with K Distinct Characters
+5. sliding window maximum
