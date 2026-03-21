@@ -47,3 +47,12 @@ This folder contains problems related to arrays.
   - Last occurrence
   - Count occurrences
   - Square root using binary search
+
+  # 📅 Day 3 — Sliding Window
+
+## 💻 Problems Solved
+
+1. Max Sum Subarray (Fixed Window)
+2. Longest Substring Without Repeating Characters
+3. Minimum Size Subarray Sum
+4. Longest Substring with K Distinct Characters
