@@ -57,10 +57,47 @@ def sliding_window_max(arr,k):
         result.append(max(window))
     return result
 
+def charecter_replacement(s,k):
+    left=0
+    count={}
+    max_freq=0
+    max_len=0
+    for right in range(len(s)):
+        count[s[right]]=count.get(s[right],0)+1
+        max_freq=max(max_freq,count[s[right]])
+        while (right-left+1)-max_freq>k:
+            count[s[left]]-=1
+            left+=1
+        max_len=max(max_len,right-left+1)
+    return max_len
+
+from collections import Counter
+
+def min_window_substring(s,t):
+    need,window=Counter(t),{}
+    left=0
+    have=0
+    res,min_len="",float('inf')
+    for right in range(len(s)):
+        c=s[right]
+        window[c]=window.get(c,0)+1
+        if c in need and window[c]==need[c]:
+            have+=1
+        while have==len(need):
+            if right-left+1<min_len:
+                res,min_len=s[left:right+1],right-left+1
+            window[s[left]]-=1
+            if s[left] in need and window[s[left]]<need[s[left]]:
+                have-=1
+            left+=1
+    return res
 
 
-print(max_sum_subarray([1,3,2,5,1,5,4,3],3))     
+
+print(max_sum_subarray([1,3,2,5,1,5,4,3],3))
 print(longest_unique_substring("abcabcbb"))
 print(longest_k_distinct("abcabcbb",2))
 print(min_subarray_sum([2,1,2,3,1],5))
 print(sliding_window_max([1,3,-1,-3,5,3,6,7],3))
+print(charecter_replacement("AABABBA",1))
+print(min_window_substring("ADOBECODEBANC","ABC"))
