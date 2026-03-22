@@ -57,6 +57,8 @@ This folder contains problems related to arrays.
 3. Minimum Size Subarray Sum
 4. Longest Substring with K Distinct Characters
 5. sliding window maximum
+6. longest repeating character replacement
+7. minimum window substring
 
 
 # 📅 Day 4 — Strings
