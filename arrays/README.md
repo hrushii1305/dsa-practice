@@ -57,3 +57,14 @@ This folder contains problems related to arrays.
 3. Minimum Size Subarray Sum
 4. Longest Substring with K Distinct Characters
 5. sliding window maximum
+
+
+# 📅 Day 4 — Strings
+
+## 💻 Problems Solved
+
+1. Reverse String  
+2. Check Palindrome  
+3. Valid Palindrome  
+4. Character Frequency  
+5. First Non-Repeating Character
