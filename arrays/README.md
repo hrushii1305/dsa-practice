@@ -70,3 +70,13 @@ This folder contains problems related to arrays.
 3. Valid Palindrome  
 4. Character Frequency  
 5. First Non-Repeating Character
+
+# 📅 Day 5 — Hashing + Two Pointers + Prefix Sum
+
+## 💻 Problems Solved
+
+1. Two Sum  
+2. Valid Anagram  
+3. Pair with Target Sum (Two Pointers)  
+4. Subarray Sum Equals K  
+5. Longest Subarray with Sum K
