@@ -31,3 +31,35 @@ def pair_with_target(arr,target):
         else:
             right-=1
     return []
+
+def subarray_sum(nums,k):
+    prefix_sum=0
+    count=0
+    prefix_map={0:1}
+    for num in nums:
+        prefix_sum+=num
+        previous_sum=prefix_sum-k
+        if previous_sum in prefix_map:
+            count+=prefix_map[previous_sum]
+        prefix_map[prefix_sum]=prefix_map.get(prefix_sum,0)+1
+    return count
+
+def longest_subarray(nums,k):
+    prefix_sum=0
+    max_length=0
+    prefix_map={}
+    for i in range(len(nums)):
+        prefix_sum+=nums[i]
+        if prefix_sum==k:
+            max_length=i+1
+        elif prefix_sum-k in prefix_map:
+            max_length=max(max_length,i-prefix_map[prefix_sum-k])
+        if prefix_sum not in prefix_map:
+            prefix_map[prefix_sum]=i
+    return max_length
+
+print(two_sum([2,7,11,15],9))
+print(is_anagram("listen","silent"))
+print(pair_with_target([1,2,3,4,5],7))
+print(subarray_sum([1,1,1],2))
+print(longest_subarray([1,-1,5,-2,3],3))
