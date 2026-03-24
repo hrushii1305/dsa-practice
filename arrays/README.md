@@ -80,3 +80,10 @@ This folder contains problems related to arrays.
 3. Pair with Target Sum (Two Pointers)  
 4. Subarray Sum Equals K  
 5. Longest Subarray with Sum K
+
+
+# 📅 Day 6 — Stack + Queue + Monotonic Stack
+
+## 💻 Problems Solved
+
+1. Valid Parentheses
