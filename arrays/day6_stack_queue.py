@@ -3,12 +3,12 @@ def is_valid(s):
     mapping={")":"(","}":"{","]":"["}
     for ch in s:
         if ch in mapping:
-            if not stack or stack[-1]!=mapping[ch]:
+            if stack and stack[-1]==mapping[ch]:
+                stack.pop()
+            else:
                 return False
-            stack.pop()
         else:
             stack.append(ch)
-    return len(stack)==0
-
+    return True if not stack else False
 
 print(is_valid("()[]{}"))
