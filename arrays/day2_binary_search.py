@@ -31,7 +31,7 @@ def last_occurrence(arr, target):
     right=len(arr)-1
     result=-1
     while left<=right:
-        mid=left+right//2
+        mid=(left+right)//2
         if arr[mid]==target:
             result=mid
             left=mid+1
