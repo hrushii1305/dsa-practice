@@ -63,6 +63,21 @@ def sqrt_binary(n):
         else:
             right=mid-1
     return ans
+
+def lower_bound(arr,target):
+    left=0
+    right=len(arr)-1
+    ans=len(arr)
+    while left<=right:
+        mid=left+right//2
+        if arr[mid]>=target:
+            ans=mid
+            right=mid-1
+        else:
+            left=mid+1
+    return ans
+
+
         
 # Example usage:
 arr = [1, 2, 3, 4, 5, 5, 5, 6, 7]
@@ -73,3 +88,4 @@ print("Last Occurrence:", last_occurrence(arr, target))  # Output: Index of the 
 print("Count Occurrences:", count_occurrences(arr, target))  # Output: Count of target in the array (3)
 print("Square Root:", sqrt_binary(16))  # Output: 4
 print("Square Root:", sqrt_binary(20))  # Output: 4
+print("Lower Bound:", lower_bound(arr, 5))  # Output: 4 (index of the first occurrence of 5)
