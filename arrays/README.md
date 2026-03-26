@@ -90,7 +90,7 @@ This folder contains problems related to arrays.
 1. Valid Parentheses
 
 
-# 📅 Day 7 — Two Pointers
+# 📅 week-4 Day 1 — Two Pointers
 
 ## 🧾 Problems Solved
 
