@@ -2,7 +2,7 @@ def binary_search(arr, target):
     left=0
     right=len(arr)-1
     while left<=right:
-        mid=left+right//2
+        mid=(left+right)//2
         if arr[mid]==target:
             return mid
         elif arr[mid]<target:
@@ -16,7 +16,7 @@ def first_occurrence(arr, target):
     right=len(arr)-1
     result=-1
     while left<=right:
-        mid=left+right//2
+        mid=(left+right)//2
         if arr[mid]==target:
             result=mid
             right=mid-1
@@ -53,7 +53,7 @@ def sqrt_binary(n):
     right=n
     ans=0
     while left<=right:
-        mid=left+right//2
+        mid=(left+right)//2
         if mid*mid==n:
             return mid
         elif mid*mid<n:
@@ -69,7 +69,7 @@ def lower_bound(arr,target):
     right=len(arr)-1
     ans=len(arr)
     while left<=right:
-        mid=left+right//2
+        mid=(left+right)//2
         if arr[mid]>=target:
             ans=mid
             right=mid-1
