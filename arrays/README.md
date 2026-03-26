@@ -88,3 +88,10 @@ This folder contains problems related to arrays.
 ## 💻 Problems Solved
 
 1. Valid Parentheses
+
+
+# 📅 Day 7 — Two Pointers
+
+## 🧾 Problems Solved
+
+1. Pair with Target Sum
