@@ -47,6 +47,7 @@ This folder contains problems related to arrays.
   - Last occurrence
   - Count occurrences
   - Square root using binary search
+  - lower bound
 
   # 📅 Day 3 — Sliding Window
 
