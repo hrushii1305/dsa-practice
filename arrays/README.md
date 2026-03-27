@@ -95,3 +95,5 @@ This folder contains problems related to arrays.
 ## 🧾 Problems Solved
 
 1. Pair with Target Sum
+2. move zeros
+3. remove duplicates
