@@ -33,9 +33,21 @@ class twopointers:
                 nums[slow],nums[fast]=nums[fast],nums[slow]
                 slow+=1
         return nums
-    
+    def water_container(self,height):
+        left=0
+        right-len(height)-1
+        res=0
+        while left<right:
+            area=(right-left)*min(height[left],height[right])
+            res=max(res,area)
+            if height[left]<height[right]:
+                left+=1
+            else:
+                right-=1
+        return res
 
 obj=twopointers()
 print(obj.pair_sum([1, 2, 3, 4, 5], 9))  # Output: [3, 4]
 print(obj.remove_duplicates([1, 1, 2, 2, 3, 3]))  # Output: [1, 2, 3]
 print(obj.move_zeros([0, 1, 0, 3, 12]))  # Output: [1, 3, 12, 0, 0]
+print(obj.water_container([1, 8, 6, 2, 5, 4, 8, 3, 7]))  # Output: 49
