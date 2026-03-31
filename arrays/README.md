@@ -97,4 +97,6 @@ This folder contains problems related to arrays.
 1. Pair with Target Sum
 2. move zeros
 3. remove duplicates
-4.container with most water
+4. container with most water
+5. two sum sorted
+6. threesum
