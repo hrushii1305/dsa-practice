@@ -1,4 +1,4 @@
-class twopointers:
+class two_pointers:
     def pair_sum(self, arr, target):
         left = 0
         right = len(arr) - 1
@@ -35,7 +35,7 @@ class twopointers:
         return nums
     def water_container(self,height):
         left=0
-        right-len(height)-1
+        right=len(height)-1
         res=0
         while left<right:
             area=(right-left)*min(height[left],height[right])
@@ -45,9 +45,46 @@ class twopointers:
             else:
                 right-=1
         return res
+    
+    def two_sum_sorted(self,nums,target):
+        left=0
+        right=len(nums)-1
+        while left<right:
+            current_sum=nums[left] + nums[right]
+            if current_sum == target:
+                return [left, right]
+            elif current_sum < target:
+                left += 1
+            else:
+                right -= 1
+        return None
+    
+    def three_sum(self,nums,target):
+        nums.sort()
+        res=[]
+        for i,a in enumerate(nums):
+            if i>0 and a==nums[i-1]:
+                continue
+            left=i+1
+            right=len(nums)-1
+            while left<right:
+                threesum=a+nums[left]+nums[right]
+                if threesum>target:
+                    right-=1
+                elif threesum<target:
+                    left+=1
+                else:
+                    res.append([a,nums[left],nums[right]])
+                    left+=1
+                    right-=1
+                    while left<right and nums[left]==nums[left-1]:
+                        left+=1
+        return res
 
-obj=twopointers()
+obj=two_pointers()
 print(obj.pair_sum([1, 2, 3, 4, 5], 9))  # Output: [3, 4]
 print(obj.remove_duplicates([1, 1, 2, 2, 3, 3]))  # Output: [1, 2, 3]
 print(obj.move_zeros([0, 1, 0, 3, 12]))  # Output: [1, 3, 12, 0, 0]
 print(obj.water_container([1, 8, 6, 2, 5, 4, 8, 3, 7]))  # Output: 49
+print(obj.two_sum_sorted([2, 7, 11, 15], 9))  # Output: [0, 1]
+print(obj.three_sum([-1, 0, 1, 2, -1, -4], 0))  # Output: [[-1, -1, 2], [-1, 0, 1]]
