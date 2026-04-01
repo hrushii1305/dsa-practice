@@ -100,3 +100,4 @@ This folder contains problems related to arrays.
 4. container with most water
 5. two sum sorted
 6. threesum
+7. trapping rain water
