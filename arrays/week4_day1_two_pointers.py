@@ -80,6 +80,26 @@ class two_pointers:
                     while left<right and nums[left]==nums[left-1]:
                         left+=1
         return res
+    
+    
+    def trapping_rain_water(self,height):
+        left=0
+        right=len(height)-1
+        left_max=0
+        right_max=0
+        res=0
+        while left<right:
+            if left_max<right_max:
+                left+=1
+                left_max=max(left_max,height[left])
+                res+=left_max-height[left]
+                
+            else:
+                right-=1
+                right_max=max(right_max,height[right])
+                res+=right_max-height[right]
+                
+        return res
 
 obj=two_pointers()
 print(obj.pair_sum([1, 2, 3, 4, 5], 9))  # Output: [3, 4]
@@ -88,3 +108,4 @@ print(obj.move_zeros([0, 1, 0, 3, 12]))  # Output: [1, 3, 12, 0, 0]
 print(obj.water_container([1, 8, 6, 2, 5, 4, 8, 3, 7]))  # Output: 49
 print(obj.two_sum_sorted([2, 7, 11, 15], 9))  # Output: [0, 1]
 print(obj.three_sum([-1, 0, 1, 2, -1, -4], 0))  # Output: [[-1, -1, 2], [-1, 0, 1]]
+print(obj.trapping_rain_water([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))  # Output: 6
