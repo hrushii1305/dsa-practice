@@ -101,3 +101,9 @@ This folder contains problems related to arrays.
 5. two sum sorted
 6. threesum
 7. trapping rain water
+
+# week-4 topic-2 prefix_sum
+## problems solved
+1. prefix sum
+2. range sum 
+3. subarray sum equals k
