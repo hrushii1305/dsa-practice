@@ -12,15 +12,15 @@ class Prefixsum:
             return prefix[r]-prefix[l-1]
         
     def subarray_sum(self,nums,k):
-        res=0
-        current_sum=0
-        prefix_sums={0:1}
-        for n in nums:
-            current_sum+=n
-            diff=current_sum-k
-            res+=prefix_sums.get(diff,0)
-            prefix_sums[current_sum]=prefix_sums.get(current_sum,0)+1
-        return res
+        prefix_sum=0
+        count=0
+        prefix_map={0:1}  # Initialize with prefix sum 0 occurring once
+        for num in nums:
+            prefix_sum+=num
+            if prefix_sum-k in prefix_map:
+                count+=prefix_map[prefix_sum-k]
+            prefix_map[prefix_sum]=prefix_map.get(prefix_sum,0)+1
+        return count
     
         
         
