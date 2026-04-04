@@ -107,3 +107,6 @@ This folder contains problems related to arrays.
 1. prefix sum
 2. range sum 
 3. subarray sum equals k
+4. longest subarray sum = k
+5. subarrays divisible by k
+6. equal 0 and 1
