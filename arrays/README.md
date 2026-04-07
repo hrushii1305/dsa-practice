@@ -83,11 +83,14 @@ This folder contains problems related to arrays.
 5. Longest Subarray with Sum K
 
 
-# 📅 Day 6 — Stack + Queue + Monotonic Stack
+# 📅 Day 6 — Stack + Monotonic Stack
 
 ## 💻 Problems Solved
 
-1. Valid Parentheses
+1. push,pop,peek,is empty
+2. valid parentheses
+3. Next greater element (decreasing monotonic stack)
+4. Next smaller element (increasing monotonic stack)
 
 
 # 📅 week-4 Day 1 — Two Pointers
