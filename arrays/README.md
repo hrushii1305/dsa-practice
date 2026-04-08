@@ -91,6 +91,8 @@ This folder contains problems related to arrays.
 2. valid parentheses
 3. Next greater element (decreasing monotonic stack)
 4. Next smaller element (increasing monotonic stack)
+5. min stack
+
 
 
 # 📅 week-4 Day 1 — Two Pointers
