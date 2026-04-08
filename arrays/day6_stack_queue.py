@@ -57,9 +57,64 @@ class solution:
             stack.append(i)
         return res
     
+    def largest_rectangle_area(self,heights):
+        maxarea=0
+        stack=[]
+        for i,h in enumerate(heights):
+            start=i
+            while stack and stack[-1][1]>h:
+                index,height=stack.pop()
+                maxarea=max(maxarea,height*(i-index))
+                start=index
+            stack.append((start,h))
+        for i,h in stack:
+            maxarea=max(maxarea,h*(len(heights)-i))
+        return maxarea
+    
+    
 obj=solution()
 s="()[]{}"
 print(obj.is_valid(s))  # Output: True
 nums=[4,5,2,10,8]
 print(obj.next_greater(nums))  # Output: [5, 10, 10, -1, -1]
 print(obj.next_smaller(nums))  # Output: [2, 2, -1, 8, -1]
+print(obj.largest_rectangle_area([2, 1, 5, 6, 2, 3]))  # Output: 10
+    
+class minstack:
+    def __init__(self):
+        self.stack=[]
+        self.min_stack=[]
+        
+    def push(self,x):
+        self.stack.append(x)
+        if not self.min_stack or x<=self.min_stack[-1]:
+            self.min_stack.append(x)
+            
+    def pop(self):
+        if self.stack:
+            if self.stack[-1]==self.min_stack[-1]:
+                self.min_stack.pop()
+            self.stack.pop()
+            
+    def top(self):
+        if self.stack:
+            return self.stack[-1]
+        
+    def get_min(self):
+        if self.min_stack:
+            return self.min_stack[-1]
+    
+
+
+obj2=minstack()
+obj2.push(5)
+obj2.push(3)
+obj2.push(2)
+obj2.push(4)
+obj2.push(7)
+print(obj2.get_min()) # Output: 2
+obj2.pop()
+print(obj2.get_min()) # Output: 2
+obj2.pop()
+obj2.pop()
+print(obj2.get_min()) # Output: 3
