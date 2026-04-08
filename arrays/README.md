@@ -92,7 +92,7 @@ This folder contains problems related to arrays.
 3. Next greater element (decreasing monotonic stack)
 4. Next smaller element (increasing monotonic stack)
 5. min stack
-
+6. largest rectangle in histogram or max rectangle area
 
 
 # 📅 week-4 Day 1 — Two Pointers
