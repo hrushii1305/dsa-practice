@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class stack:
     def __init__(self):
         self.stack=[]
@@ -118,3 +121,31 @@ print(obj2.get_min()) # Output: 2
 obj2.pop()
 obj2.pop()
 print(obj2.get_min()) # Output: 3
+
+
+class queue:
+    def __init__(self):
+        self.queue=deque()
+        
+    def enqueue(self,x):
+        self.queue.append(x)
+        print(x,"added")
+        
+    def dequeue(self):
+        if self.queue:
+            return self.queue.popleft()
+        return "queue is empty"
+    
+    def peek(self):
+        if self.queue:
+            return self.queue[0]
+        return "queue is empty"
+    
+    def is_empty(self):
+        return len(self.queue)==0
+obj3=queue()
+obj3.enqueue(1)
+obj3.enqueue(2)
+obj3.enqueue(3)
+print(obj3.dequeue())  # Output: 1
+print(obj3.peek())     # Output: 2
