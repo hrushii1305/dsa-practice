@@ -94,6 +94,9 @@ This folder contains problems related to arrays.
 5. min stack
 6. largest rectangle in histogram or max rectangle area
 
+## queue
+1. push pop peek isempty (queue)
+
 
 # 📅 week-4 Day 1 — Two Pointers
 
