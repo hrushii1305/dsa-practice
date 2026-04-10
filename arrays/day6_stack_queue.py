@@ -149,3 +149,54 @@ obj3.enqueue(2)
 obj3.enqueue(3)
 print(obj3.dequeue())  # Output: 1
 print(obj3.peek())     # Output: 2
+
+class circularqueue:
+    def __init__(self,size):
+        self.size=size
+        self.queue=[None]*size
+        self.front=-1
+        self.rear=-1
+        
+    def enqueue(self,x):
+        if (self.rear+1)%self.size==self.front:
+            return "queue is full"
+        if self.front==-1:
+            self.front=0
+        self.rear=(self.rear+1)%self.size
+        self.queue[self.rear]=x
+        print(x,"added")
+        
+    def dequeue(self):
+        if self.front==-1:
+            print("queue is empty")
+            return
+        val=self.queue[self.front]
+        if self.front==self.rear:
+            self.front=-1
+            self.rear=-1
+        else:
+            self.front=(self.front+1)%self.size
+        return val,"removed"
+    
+    def display(self):
+        if self.front==-1:
+            print("queue is empty")
+            return
+        i=self.front
+        while True:
+            print(self.queue[i],end=" ")
+            if i==self.rear:
+                break
+            i=(i+1)%self.size
+        print()
+obj4=circularqueue(5)
+obj4.enqueue(1)
+obj4.enqueue(2)
+obj4.enqueue(3)
+obj4.enqueue(4)
+obj4.enqueue(5)
+obj4.enqueue(6)  # Output: "queue is full"
+obj4.display()  # Output: 1 2 3 4 5
+print(obj4.dequeue())  # Output: (1, "removed")
+print(obj4.dequeue())  # Output: (2, "removed")
+obj4.display()  # Output: 3 4 5
