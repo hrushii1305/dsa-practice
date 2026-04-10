@@ -96,6 +96,7 @@ This folder contains problems related to arrays.
 
 ## queue
 1. push pop peek isempty (queue)
+2. circular queue
 
 
 # 📅 week-4 Day 1 — Two Pointers
