@@ -97,6 +97,7 @@ This folder contains problems related to arrays.
 ## queue
 1. push pop peek isempty (queue)
 2. circular queue
+3. sliding window max
 
 
 # 📅 week-4 Day 1 — Two Pointers
