@@ -200,3 +200,22 @@ obj4.display()  # Output: 1 2 3 4 5
 print(obj4.dequeue())  # Output: (1, "removed")
 print(obj4.dequeue())  # Output: (2, "removed")
 obj4.display()  # Output: 3 4 5
+
+class max:
+    def sliding_window_max(self,k,nums):
+        res=[]
+        dq=deque()
+        for i in range(len(nums)):
+            if dq and dq[0]<i-k+1:
+                dq.popleft()
+            while dq and nums[i]>nums[dq[-1]]:
+                dq.pop()
+            dq.append(i)
+            if i>=k-1:
+                res.append(nums[dq[0]])
+        return res
+    
+obj5=max()
+nums=[1,3,-1,-3,5,3,6,7]
+k=3
+print(obj5.sliding_window_max(k,nums))  # Output: [3, 3, 5, 5, 6, 7]
