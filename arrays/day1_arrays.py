@@ -24,6 +24,15 @@ def count_even(arr):
             count += 1  # Increment count if it's even
     return count
 
+def duplicates(arr):
+    seen=set()
+    for i in arr:
+        if i in seen:
+            return True
+        seen.add(i)
+    return False
+
 print(find_max([3, 1, 4, 1, 5, 9]))  # Output: 9
 print(array_sum([3, 1, 4, 1, 5, 9]))  # Output: 23
 print(count_even([3, 1, 4, 1, 5, 9]))  # Output: 1
+print(duplicates([3, 1, 4, 5, 9]))  # Output: True

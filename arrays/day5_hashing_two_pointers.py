@@ -1,10 +1,10 @@
 def two_sum(nums,target):
     num_map = {}
-    for i in range(len(nums)):
-        diff=target-nums[i]
+    for i,num in enumerate(nums):
+        diff=target-num
         if diff in num_map:
             return [num_map[diff],i]
-        num_map[nums[i]]=i
+        num_map[num]=i
     return []
 
 def is_anagram(s,t):
